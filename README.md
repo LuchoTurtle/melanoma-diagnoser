@@ -1,11 +1,8 @@
 [//]: # (Image References)
 
 [image1]: ./images/skin_disease_classes.png "Skin Disease Classes"
-[image2]: ./images/cat_1.jpeg "Category 1 Rankings"
-[image3]: ./images/cat_2.jpeg "Category 2 Rankings"
-[image4]: ./images/cat_3.png "Category 3 Rankings"
-[image5]: ./images/sample_ROC_curve.png "Sample ROC curve"
-[image6]: ./images/sample_confusion_matrix.png "Sample confusion matrix"
+[image2]: ./images/my_roc.png "Yielded ROC curve"
+[image3]: ./images/my_matrix.png "Yielded confusion matrix"
 
 # Melanoma Diagonser
 
@@ -34,17 +31,25 @@ This refers to the average of the ROC values from the first two categories.
 
 ### My results
 
-The corresponding **ROC curves** appear in a pop-up window, along with the **confusion matrix** corresponding to melanoma classification.  
+My results for each category are as follows:
 
-![Sample ROC curve][image5]
-![Sample confusion matrix][image6]
+```
+Category 1 Score: 0.740
+Category 2 Score: 0.857
+Category 3 Score: 0.798
+```
 
-The code for generating the confusion matrix assumes that the threshold for classifying melanoma is set to 0.5.  To change this threshold, you need only supply an additional command-line argument when calling the `get_results.py` file.  For instance, to set the threshold at 0.4, you need only run:
+The corresponding **ROC CURVES** I got and the **confusion matrix** related to the melanoma classification task are shown as follows (the command ```python get_results.py my_submissions.csv``` was executed to yield these plots):
+
+
+![Sample ROC curve][image2]
+![Sample confusion matrix][image3]
+
+The threshold of the confusion matrix is `0.5`, its default. If you want to change the threshold to another value (for example, 0.4), you'd run the command like so:
+
 ```text
 python get_results.py sample_predictions.csv 0.4
 ```
-
-To test **your own** submission, change the code to instead include the path to **your** CSV file.
 
 ## I want to give this repo a whirl!
 You're encouraged to want to try this for yourself! This notebook is my personal solution for the problem proposed by Udacity. If you want to try it and get your own results or share it with your friends, visit their and check the [**Getting started**](https://github.com/udacity/dermatologist-ai#getting-started) and [**Getting your results**](https://github.com/udacity/dermatologist-ai#getting-your-results) sections.
@@ -52,5 +57,3 @@ You're encouraged to want to try this for yourself! This notebook is my personal
 
 ## License
 [![License: MIT](https://img.shields.io/badge/license-MIT-green)](http://unlicense.org/)
-
-
